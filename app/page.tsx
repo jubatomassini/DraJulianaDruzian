@@ -8,11 +8,11 @@ import { SpecialtiesSection } from "@/components/sections/SpecialtiesSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-full flex-col">
+    <div className="flex min-h-full flex-col overflow-x-clip">
       <main id="conteudo-principal">
         <HeroSection />
-        <AboutSection />
         <SpecialtiesSection />
+        <AboutSection />
         <DifferentialsSection />
         <CtaSection />
         <LocationSection />

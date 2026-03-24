@@ -7,7 +7,7 @@ export function SiteFooter() {
   const wa = getWhatsAppHref();
 
   return (
-    <footer className="border-t border-brown-soft/10 bg-white py-12">
+    <footer className="border-t border-brown-soft/10 bg-white py-10 pb-[max(2.5rem,env(safe-area-inset-bottom,0px))] pt-10 sm:py-12">
       <Container className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="font-serif text-lg font-medium text-foreground">

@@ -33,7 +33,7 @@ const items = [
 export function DifferentialsSection() {
   return (
     <section
-      className="bg-white py-16 sm:py-20 lg:py-24"
+      className="bg-gradient-to-b from-white to-beige-warm/25 py-14 sm:py-20 lg:py-24"
       aria-labelledby="diff-heading"
     >
       <Container>
@@ -43,14 +43,14 @@ export function DifferentialsSection() {
           title="Um cuidado pensado para você"
           as="h2"
         />
-        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {items.map(({ title, text, Icon }) => (
-            <li key={title}>
-              <div className="flex flex-col items-start rounded-2xl border border-transparent p-2 transition hover:border-rose-soft/40 hover:bg-beige-warm/40">
-                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-sage/15 text-sage">
+            <li key={title} className="min-w-0">
+              <div className="flex h-full min-h-[8.5rem] flex-col items-start rounded-2xl border border-brown-soft/10 bg-white/90 p-4 shadow-sm transition hover:border-sage/25 hover:shadow-md sm:min-h-0 sm:p-5">
+                <span className="mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage/12 text-sage">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="font-serif text-lg font-medium text-foreground">
+                <h3 className="font-serif text-lg font-medium leading-snug text-foreground">
                   {title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>

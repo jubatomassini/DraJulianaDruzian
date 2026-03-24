@@ -25,10 +25,10 @@ export function CtaSection() {
           Atendimento em {site.cityUf}. Fale pelo WhatsApp para combinar horário
           e tirar dúvidas sobre o primeiro passo.
         </p>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex justify-center px-1 sm:px-0">
           <WhatsAppLink
             href={wa}
-            className="min-h-12 bg-white px-10 py-3 text-base text-sage shadow-lg"
+            className="min-h-12 w-full max-w-sm justify-center bg-white px-8 py-3.5 text-base text-sage shadow-lg sm:w-auto sm:max-w-none sm:px-10 sm:py-3"
             ariaLabel="Abrir WhatsApp para agendar consulta de reumatologia"
           >
             Falar no WhatsApp

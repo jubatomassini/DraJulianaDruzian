@@ -12,7 +12,11 @@ export function FloatingWhatsApp() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="focus-ring fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition hover:scale-105 hover:shadow-xl"
+      className="focus-ring fixed z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition hover:scale-105 hover:shadow-xl"
+      style={{
+        bottom: "max(1.25rem, env(safe-area-inset-bottom, 0px))",
+        right: "max(1.25rem, env(safe-area-inset-right, 0px))",
+      }}
       aria-label="Abrir WhatsApp para agendar consulta"
     >
       <svg

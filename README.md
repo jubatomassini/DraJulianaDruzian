@@ -44,6 +44,12 @@ npm start
 | `NEXT_PUBLIC_MAPS_EMBED_URL` / `NEXT_PUBLIC_MAPS_DIRECTIONS_URL` | Seção do mapa |
 | `NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS` | `true` só com endereço real conferido |
 
+## Fotos por condição (especialidades)
+
+Cada card tenta carregar `public/images/specialties/{slug}.jpg`. Se o arquivo não existir, aparece um **placeholder visual** editorial até você subir a foto.
+
+Slugs atuais: `les`, `sjogren`, `esclerose-sistemica`, `miosites`, `artrite-reumatoide`, `espondiloartrites`, `gota`, `osteoporose`, `artrose`, `fibromialgia`, `tendinites-bursites`.
+
 ## Estrutura principal
 
 - `app/` — rotas, metadata, `opengraph-image.tsx`, `sitemap.ts`, `robots.ts`

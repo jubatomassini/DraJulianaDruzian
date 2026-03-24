@@ -20,8 +20,8 @@ export function LocationSection() {
           title="Onde atendemos"
           as="h2"
         />
-        <div className="grid items-start gap-10 lg:grid-cols-2">
-          <div>
+        <div className="grid min-w-0 items-start gap-10 lg:grid-cols-2">
+          <div className="min-w-0">
             <address className="not-italic">
               <p className="text-lg font-medium text-foreground">
                 {site.addressLine}
@@ -47,7 +47,7 @@ export function LocationSection() {
               </p>
             )}
           </div>
-          <div>
+          <div className="min-w-0">
             {hasEmbed ? (
               <LazyMapEmbed
                 embedUrl={site.mapsEmbedUrl}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { JsonLd } from "@/components/JsonLd";
@@ -55,6 +55,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#f5f1ed",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -65,7 +72,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${dmSans.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-full bg-background text-foreground">
+      <body className="font-sans min-h-full overflow-x-clip bg-background text-foreground">
         <JsonLd />
         {children}
         <FloatingWhatsApp />
