@@ -21,7 +21,7 @@ export function SpecialtiesSection() {
         <p className="-mt-4 mb-12 max-w-[min(100%,42rem)] text-center text-base leading-relaxed text-muted sm:mx-0 sm:mb-14 sm:max-w-2xl sm:text-left">
           Cada tópico traz uma visão educativa sobre o que costuma ser avaliado
           na consulta. O conteúdo é informativo e{" "}
-          <strong className="font-semibold text-foreground">
+          <strong className="font-medium text-foreground">
             não substitui avaliação médica individual
           </strong>
           .
@@ -31,7 +31,7 @@ export function SpecialtiesSection() {
           {specialtyGroups.map((group) => (
             <div key={group.title} className="min-w-0">
               <header className="mb-6 text-center sm:mb-8 sm:border-l-[3px] sm:border-sage/50 sm:pl-5 sm:text-left">
-                <h3 className="font-sans text-xl font-semibold text-foreground sm:text-2xl">
+                <h3 className="font-sans text-xl font-light text-foreground sm:text-2xl">
                   {group.title}
                 </h3>
                 <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">

@@ -19,18 +19,18 @@ export function HeroSection() {
       />
       <Container className="relative grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:gap-14">
         <div className="animate-fade-up order-1 min-w-0 max-w-xl text-center sm:text-left lg:max-w-none">
-          <p className="mb-3 text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-sage sm:text-sm sm:tracking-[0.18em]">
+          <p className="mb-3 text-xs font-light uppercase leading-relaxed tracking-[0.14em] text-sage sm:text-sm sm:tracking-[0.18em]">
             Reumatologia · {site.cityUf}
           </p>
           <h1
             id="hero-heading"
-            className="text-balance font-sans text-3xl font-bold leading-[1.12] tracking-tight text-foreground sm:text-left sm:text-4xl sm:leading-[1.1] md:text-5xl lg:text-6xl"
+            className="text-balance font-sans text-3xl font-light leading-[1.12] tracking-tight text-foreground sm:text-left sm:text-4xl sm:leading-[1.1] md:text-5xl lg:text-6xl"
           >
             Cuidando da sua saúde com precisão, empatia e ciência.
           </h1>
           <p className="mt-4 text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
             Especialista em{" "}
-            <strong className="font-semibold text-foreground">
+            <strong className="font-medium text-foreground">
               doenças reumatológicas
             </strong>{" "}
             com foco em qualidade de vida.
@@ -46,7 +46,7 @@ export function HeroSection() {
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
               <Link
                 href="/#especialidades"
-                className="focus-ring text-center text-sm font-semibold text-brown-soft underline-offset-4 sm:text-left hover:underline"
+                className="focus-ring text-center text-sm font-light text-brown-soft underline-offset-4 sm:text-left hover:underline"
               >
                 Ver condições acompanhadas
               </Link>
@@ -55,7 +55,7 @@ export function HeroSection() {
               </span>
               <Link
                 href="/#sobre"
-                className="focus-ring text-center text-sm font-semibold text-brown-soft underline-offset-4 sm:text-left hover:underline"
+                className="focus-ring text-center text-sm font-light text-brown-soft underline-offset-4 sm:text-left hover:underline"
               >
                 Conhecer a médica
               </Link>

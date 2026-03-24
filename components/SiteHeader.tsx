@@ -90,10 +90,10 @@ function BrandMark({
   if (logoBroken) {
     return (
       <div className="flex min-w-0 flex-col leading-tight">
-        <span className="truncate font-sans text-sm font-semibold text-foreground sm:text-base">
+        <span className="truncate font-sans text-sm font-light text-foreground sm:text-base">
           Dra. Juliana Druzian
         </span>
-        <span className="text-xs font-semibold text-sage">{site.specialty}</span>
+        <span className="text-xs font-light text-sage">{site.specialty}</span>
       </div>
     );
   }
@@ -153,20 +153,20 @@ export function SiteHeader() {
           <BrandMark logoBroken={logoBroken} setLogoBroken={setLogoBroken} />
           {!logoBroken ? (
             <div className="flex min-w-0 flex-col leading-tight sm:hidden">
-              <span className="truncate font-sans text-sm font-semibold text-foreground">
+              <span className="truncate font-sans text-sm font-light text-foreground">
                 Dra. Juliana Druzian
               </span>
-              <span className="text-[11px] font-semibold text-sage">
+              <span className="text-[11px] font-light text-sage">
                 {site.specialty}
               </span>
             </div>
           ) : null}
           {!logoBroken ? (
             <div className="hidden min-w-0 flex-col leading-tight sm:flex">
-              <span className="truncate font-sans text-sm font-semibold text-foreground">
+              <span className="truncate font-sans text-sm font-light text-foreground">
                 Dra. Juliana Druzian
               </span>
-              <span className="text-xs font-semibold text-sage">{site.specialty}</span>
+              <span className="text-xs font-light text-sage">{site.specialty}</span>
             </div>
           ) : null}
         </Link>
@@ -177,7 +177,7 @@ export function SiteHeader() {
         >
           <Link
             href="/"
-            className="focus-ring rounded-full px-3 py-2 text-sm font-semibold text-foreground/90 transition hover:bg-beige-warm hover:text-foreground"
+            className="focus-ring rounded-full px-3 py-2 text-sm font-extralight text-foreground/90 transition hover:bg-beige-warm hover:text-foreground"
           >
             Início
           </Link>
@@ -185,7 +185,7 @@ export function SiteHeader() {
             <Link
               key={href}
               href={href}
-              className="focus-ring rounded-full px-3 py-2 text-sm font-semibold text-foreground/90 transition hover:bg-beige-warm hover:text-foreground"
+              className="focus-ring rounded-full px-3 py-2 text-sm font-extralight text-foreground/90 transition hover:bg-beige-warm hover:text-foreground"
             >
               {label}
             </Link>
@@ -225,7 +225,7 @@ export function SiteHeader() {
             <Link
               ref={firstLinkRef}
               href="/"
-              className="focus-ring rounded-xl px-4 py-3 text-center text-base font-semibold text-foreground"
+              className="focus-ring rounded-xl px-4 py-3 text-center text-base font-light text-foreground"
               onClick={close}
             >
               Início
@@ -234,14 +234,14 @@ export function SiteHeader() {
               <Link
                 key={href}
                 href={href}
-                className="focus-ring rounded-xl px-4 py-3 text-center text-base font-semibold text-foreground"
+                className="focus-ring rounded-xl px-4 py-3 text-center text-base font-light text-foreground"
                 onClick={close}
               >
                 {label}
               </Link>
             ))}
             <div className="mt-4 border-t border-brown-soft/10 pt-4">
-              <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wider text-muted">
+              <p className="mb-2 text-center text-xs font-light uppercase tracking-wider text-muted">
                 Redes e currículo
               </p>
               <SocialLinks />

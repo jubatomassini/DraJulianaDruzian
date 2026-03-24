@@ -43,7 +43,7 @@ export function DoctorMonogram({ variant }: { variant: "hero" | "about" }) {
       }
       aria-hidden
     >
-      <span className="font-sans text-6xl font-bold tracking-tight text-brown-soft/40 sm:text-7xl md:text-8xl">
+      <span className="font-sans text-6xl font-light tracking-tight text-brown-soft/40 sm:text-7xl md:text-8xl">
         JD
       </span>
     </div>

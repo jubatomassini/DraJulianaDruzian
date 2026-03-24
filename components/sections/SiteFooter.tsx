@@ -9,7 +9,7 @@ export function SiteFooter() {
     <footer className="border-t border-brown-soft/10 bg-white py-10 pb-[max(2.5rem,env(safe-area-inset-bottom,0px))] pt-10 sm:py-12">
       <Container className="flex flex-col items-center gap-8 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
         <div>
-          <p className="font-sans text-lg font-semibold text-foreground">
+          <p className="font-sans text-lg font-light text-foreground">
             {site.name}
           </p>
           <p className="mt-1 text-sm text-muted">{site.specialty}</p>
@@ -22,7 +22,7 @@ export function SiteFooter() {
               href={wa}
               target="_blank"
               rel="noopener noreferrer"
-              className="focus-ring font-medium text-sage underline-offset-4 hover:underline"
+              className="focus-ring font-light text-sage underline-offset-4 hover:underline"
               aria-label="WhatsApp da Dra. Juliana Druzian"
             >
               WhatsApp para agendamento

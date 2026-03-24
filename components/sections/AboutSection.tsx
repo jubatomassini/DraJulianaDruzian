@@ -24,7 +24,7 @@ export function AboutSection() {
             />
             <div className="mx-auto max-w-none space-y-4 text-[0.9375rem] leading-relaxed text-muted sm:mx-0 sm:text-base">
               <p>
-                <strong className="font-semibold text-foreground">
+                <strong className="font-medium text-foreground">
                   {site.name}
                 </strong>{" "}
                 acredita que a reumatologia vai muito além do diagnóstico. Seu

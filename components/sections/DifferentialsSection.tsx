@@ -50,7 +50,7 @@ export function DifferentialsSection() {
                 <span className="mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage/12 text-sage">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="font-sans text-lg font-semibold leading-snug text-foreground">
+                <h3 className="font-sans text-lg font-light leading-snug text-foreground">
                   {title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>

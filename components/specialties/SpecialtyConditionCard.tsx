@@ -10,7 +10,7 @@ export function SpecialtyConditionCard({ item }: { item: SpecialtyItem }) {
         palette={item.palette}
       />
       <div className="flex flex-1 flex-col px-4 pb-5 pt-4 text-center sm:px-5 sm:pt-5 sm:text-left">
-        <h4 className="font-sans text-lg font-semibold leading-snug text-foreground sm:text-xl">
+        <h4 className="font-sans text-lg font-light leading-snug text-foreground sm:text-xl">
           {item.title}
         </h4>
         <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-muted sm:text-sm">

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { BackToTop } from "@/components/BackToTop";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { JsonLd } from "@/components/JsonLd";
@@ -7,11 +7,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin", "latin-ext"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["200", "300", "500"],
 });
 
 export const metadata: Metadata = {
@@ -66,9 +66,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${dmSans.variable} h-full scroll-smooth antialiased`}
+      className={`${montserrat.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-full overflow-x-clip bg-background text-foreground">
+      <body className="font-sans font-extralight min-h-full overflow-x-clip bg-background text-foreground">
         <JsonLd />
         <SiteHeader />
         <div className="pt-[calc(4rem+env(safe-area-inset-top,0px))] sm:pt-[calc(4.25rem+env(safe-area-inset-top,0px))]">

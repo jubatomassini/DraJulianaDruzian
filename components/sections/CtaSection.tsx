@@ -17,7 +17,7 @@ export function CtaSection() {
       <Container className="relative text-center">
         <h2
           id="cta-heading"
-          className="mx-auto max-w-2xl font-sans text-3xl font-bold leading-tight sm:text-4xl md:text-[2.5rem] md:leading-tight"
+          className="mx-auto max-w-2xl font-sans text-3xl font-light leading-tight sm:text-4xl md:text-[2.5rem] md:leading-tight"
         >
           Agende sua consulta e cuide da sua saúde hoje mesmo
         </h2>

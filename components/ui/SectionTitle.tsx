@@ -23,14 +23,14 @@ export function SectionTitle({
     <div className={`mb-8 sm:mb-10 ${wrap}`}>
       {eyebrow ? (
         <p
-          className={`mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-sage sm:text-sm sm:tracking-[0.16em] ${align === "responsive" ? "text-center sm:text-left" : ""}`}
+          className={`mb-2 text-xs font-light uppercase tracking-[0.14em] text-sage sm:text-sm sm:tracking-[0.18em] ${align === "responsive" ? "text-center sm:text-left" : ""}`}
         >
           {eyebrow}
         </p>
       ) : null}
       <Tag
         id={id}
-        className="text-balance font-sans text-2xl font-semibold leading-[1.2] tracking-tight text-foreground sm:text-3xl sm:leading-tight md:text-4xl"
+        className="text-balance font-sans text-2xl font-light leading-[1.2] tracking-tight text-foreground sm:text-3xl sm:leading-tight md:text-4xl"
       >
         {title}
       </Tag>
