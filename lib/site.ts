@@ -1,5 +1,10 @@
 const trimSlash = (s: string) => s.replace(/\/+$/, "");
 
+function envUrl(key: string): string {
+  const v = process.env[key]?.trim();
+  return v && v.length > 0 ? v : "";
+}
+
 export const site = {
   name: "Dra. Juliana Druzian",
   specialty: "Reumatologia",
@@ -24,6 +29,9 @@ export const site = {
   aboutImageSrc: process.env.NEXT_PUBLIC_ABOUT_IMAGE?.trim() || "",
   jsonLdIncludeAddress:
     process.env.NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS === "true",
+  facebookUrl: envUrl("NEXT_PUBLIC_FACEBOOK_URL"),
+  instagramUrl: envUrl("NEXT_PUBLIC_INSTAGRAM_URL"),
+  lattesUrl: envUrl("NEXT_PUBLIC_LATTES_URL"),
 } as const;
 
 export const whatsAppPrefill =

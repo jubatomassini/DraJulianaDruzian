@@ -1,7 +1,9 @@
 import { LazyMapEmbed } from "@/components/maps/LazyMapEmbed";
+import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { site } from "@/lib/site";
+import { sectionScrollMt } from "@/lib/sectionClasses";
 
 export function LocationSection() {
   const hasEmbed = Boolean(site.mapsEmbedUrl);
@@ -10,7 +12,7 @@ export function LocationSection() {
   return (
     <section
       id="localizacao"
-      className="scroll-mt-24 bg-beige-warm/40 py-16 sm:py-20 lg:py-24"
+      className={`${sectionScrollMt} bg-beige-warm/40 py-16 sm:py-20 lg:py-24`}
       aria-labelledby="location-heading"
     >
       <Container>
@@ -21,22 +23,24 @@ export function LocationSection() {
           as="h2"
         />
         <div className="grid min-w-0 items-start gap-10 lg:grid-cols-2">
-          <div className="min-w-0">
+          <div className="min-w-0 text-center sm:text-left">
             <address className="not-italic">
-              <p className="text-lg font-medium text-foreground">
+              <p className="text-lg font-semibold text-foreground">
                 {site.addressLine}
               </p>
               <p className="mt-2 text-muted">{site.cityUf}</p>
             </address>
             {hasDirections ? (
-              <a
-                href={site.mapsDirectionsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="focus-ring mt-6 inline-flex min-h-11 items-center justify-center rounded-full border border-sage/40 bg-white px-6 py-2.5 text-sm font-medium text-sage transition hover:bg-sage/10"
-              >
-                Como chegar
-              </a>
+              <div className="mt-6 flex justify-center sm:justify-start">
+                <ButtonLink
+                  href={site.mapsDirectionsUrl}
+                  variant="secondary"
+                  className="min-h-12 px-8"
+                  ariaLabel="Abrir rota no mapa — como chegar ao consultório"
+                >
+                  Como chegar
+                </ButtonLink>
+              </div>
             ) : (
               <p className="mt-4 text-sm text-muted">
                 Configure{" "}

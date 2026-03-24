@@ -46,11 +46,11 @@ export function DifferentialsSection() {
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {items.map(({ title, text, Icon }) => (
             <li key={title} className="min-w-0">
-              <div className="flex h-full min-h-[8.5rem] flex-col items-start rounded-2xl border border-brown-soft/10 bg-white/90 p-4 shadow-sm transition hover:border-sage/25 hover:shadow-md sm:min-h-0 sm:p-5">
+              <div className="flex h-full min-h-[8.5rem] flex-col items-center rounded-2xl border border-brown-soft/10 bg-white/90 p-4 text-center shadow-sm transition hover:border-sage/25 hover:shadow-md motion-safe:hover:-translate-y-1 motion-safe:transition-transform sm:min-h-0 sm:items-start sm:p-5 sm:text-left">
                 <span className="mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage/12 text-sage">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="font-serif text-lg font-medium leading-snug text-foreground">
+                <h3 className="font-sans text-lg font-semibold leading-snug text-foreground">
                   {title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>

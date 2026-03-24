@@ -34,6 +34,11 @@ npm run build
 npm start
 ```
 
+## Logo e menu
+
+- Coloque o arquivo **`public/logo.svg`** (vector da marca). Enquanto o SVG não carregar, o cabeçalho mostra o nome **Dra. Juliana Druzian** em texto.
+- O menu fixo inclui âncoras (Início, Especialidades, Sobre, Localização) e ícones para **Facebook**, **Instagram** e **Currículo Lattes** quando as URLs abaixo estiverem definidas.
+
 ## Checklist rápido na Vercel
 
 | Variável | Quando |
@@ -43,6 +48,9 @@ npm start
 | `NEXT_PUBLIC_CITY_UF`, `NEXT_PUBLIC_ADDRESS`, `NEXT_PUBLIC_CRM` | Conteúdo e SEO local |
 | `NEXT_PUBLIC_MAPS_EMBED_URL` / `NEXT_PUBLIC_MAPS_DIRECTIONS_URL` | Seção do mapa |
 | `NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS` | `true` só com endereço real conferido |
+| `NEXT_PUBLIC_FACEBOOK_URL` | Link do Facebook (menu) |
+| `NEXT_PUBLIC_INSTAGRAM_URL` | Link do Instagram (menu) |
+| `NEXT_PUBLIC_LATTES_URL` | Currículo na Plataforma Lattes (menu) |
 
 ## Fotos por condição (especialidades)
 
@@ -53,6 +61,7 @@ Slugs atuais: `les`, `sjogren`, `esclerose-sistemica`, `miosites`, `artrite-reum
 ## Estrutura principal
 
 - `app/` — rotas, metadata, `opengraph-image.tsx`, `sitemap.ts`, `robots.ts`
+- `components/SiteHeader.tsx` — cabeçalho fixo, menu mobile e redes
 - `components/sections/` — blocos da página inicial
 - `components/maps/LazyMapEmbed.tsx` — mapa ao entrar na viewport
 - `lib/site.ts` — URLs e textos a partir das envs

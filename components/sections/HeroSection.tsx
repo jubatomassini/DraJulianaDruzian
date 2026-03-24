@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { DoctorMonogram, DoctorVisual } from "@/components/DoctorVisual";
@@ -9,7 +10,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative overflow-x-clip overflow-y-visible bg-gradient-to-b from-beige-warm/90 via-white to-white pb-12 pt-10 sm:pb-16 sm:pt-14 lg:pb-24 lg:pt-20"
+      className="relative overflow-x-clip overflow-y-visible bg-gradient-to-b from-beige-warm/90 via-white to-white pb-12 pt-8 sm:pb-16 sm:pt-12 lg:pb-24 lg:pt-16"
       aria-labelledby="hero-heading"
     >
       <div
@@ -17,13 +18,13 @@ export function HeroSection() {
         aria-hidden
       />
       <Container className="relative grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:gap-14">
-        <div className="animate-fade-up order-1 min-w-0 max-w-xl">
-          <p className="mb-3 text-xs font-medium uppercase leading-relaxed tracking-[0.12em] text-sage sm:text-sm sm:tracking-[0.18em]">
+        <div className="animate-fade-up order-1 min-w-0 max-w-xl text-center sm:text-left lg:max-w-none">
+          <p className="mb-3 text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-sage sm:text-sm sm:tracking-[0.18em]">
             Reumatologia · {site.cityUf}
           </p>
           <h1
             id="hero-heading"
-            className="text-balance font-serif text-[1.7rem] font-medium leading-[1.15] tracking-tight text-foreground min-[400px]:text-[1.85rem] sm:text-4xl sm:leading-[1.12] md:text-5xl"
+            className="text-balance font-sans text-3xl font-bold leading-[1.12] tracking-tight text-foreground sm:text-left sm:text-4xl sm:leading-[1.1] md:text-5xl lg:text-6xl"
           >
             Cuidando da sua saúde com precisão, empatia e ciência.
           </h1>
@@ -34,32 +35,33 @@ export function HeroSection() {
             </strong>{" "}
             com foco em qualidade de vida.
           </p>
-          <div className="mt-7 flex w-full min-w-0 flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-7 flex w-full min-w-0 flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start">
             <WhatsAppLink
               href={wa}
-              className="min-h-12 w-full justify-center rounded-full bg-sage px-8 py-3.5 text-[0.9375rem] text-white shadow-md shadow-sage/25 sm:w-auto sm:py-3"
+              tone="primary"
+              className="w-full sm:w-auto"
             >
               Agendar consulta
             </WhatsAppLink>
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
-              <a
-                href="#especialidades"
-                className="focus-ring text-center text-sm font-medium text-brown-soft underline-offset-4 sm:text-left hover:underline"
+              <Link
+                href="/#especialidades"
+                className="focus-ring text-center text-sm font-semibold text-brown-soft underline-offset-4 sm:text-left hover:underline"
               >
                 Ver condições acompanhadas
-              </a>
+              </Link>
               <span className="hidden text-brown-soft/30 sm:inline" aria-hidden>
                 ·
               </span>
-              <a
-                href="#sobre"
-                className="focus-ring text-center text-sm font-medium text-brown-soft underline-offset-4 sm:text-left hover:underline"
+              <Link
+                href="/#sobre"
+                className="focus-ring text-center text-sm font-semibold text-brown-soft underline-offset-4 sm:text-left hover:underline"
               >
                 Conhecer a médica
-              </a>
+              </Link>
             </div>
           </div>
-          <p className="mt-5 max-w-md text-xs leading-relaxed text-muted sm:mt-6">
+          <p className="mx-auto mt-5 max-w-md text-xs leading-relaxed text-muted sm:mx-0 sm:mt-6 sm:text-left">
             Conteúdo informativo. Não substitui consulta médica presencial.
           </p>
         </div>

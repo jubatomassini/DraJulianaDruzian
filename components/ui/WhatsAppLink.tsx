@@ -1,10 +1,28 @@
 import type { ReactNode } from "react";
+import {
+  buttonBase,
+  buttonContrast,
+  buttonPrimary,
+  buttonWhatsApp,
+} from "@/components/ui/buttonStyles";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+
+type Tone = "primary" | "whatsapp" | "contrast";
 
 type Props = {
   href: string | null;
   className?: string;
   children: ReactNode;
   ariaLabel?: string;
+  /** Visual do botão; `custom` usa só `className` + `buttonBase`. */
+  tone?: Tone;
+  showIcon?: boolean;
+};
+
+const toneClass: Record<Exclude<Tone, "custom">, string> = {
+  primary: buttonPrimary,
+  whatsapp: buttonWhatsApp,
+  contrast: buttonContrast,
 };
 
 export function WhatsAppLink({
@@ -12,11 +30,15 @@ export function WhatsAppLink({
   className,
   children,
   ariaLabel = "Agendar consulta pelo WhatsApp",
+  tone = "primary",
+  showIcon = true,
 }: Props) {
+  const style = `${buttonBase} ${toneClass[tone]} ${className ?? ""}`.trim();
+
   if (!href) {
     return (
       <span
-        className={`inline-flex cursor-not-allowed items-center justify-center rounded-full bg-muted/30 px-6 py-3 text-sm text-muted ${className ?? ""}`}
+        className={`${buttonBase} cursor-not-allowed bg-muted/25 text-muted shadow-none ring-0 ${className ?? ""}`}
         title="Configure NEXT_PUBLIC_WHATSAPP_E164 no ambiente"
       >
         {children}
@@ -29,9 +51,10 @@ export function WhatsAppLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`focus-ring inline-flex min-h-11 min-w-11 items-center justify-center rounded-full font-medium transition hover:opacity-90 ${className ?? ""}`}
+      className={style}
       aria-label={ariaLabel}
     >
+      {showIcon ? <WhatsAppIcon className="h-5 w-5 shrink-0" /> : null}
       {children}
     </a>
   );

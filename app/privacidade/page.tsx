@@ -13,20 +13,20 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="min-h-full bg-white pb-16 pt-12">
-      <Container className="max-w-3xl">
+      <Container className="max-w-3xl text-center sm:text-left">
         <Link
           href="/"
-          className="focus-ring text-sm font-medium text-sage underline-offset-4 hover:underline"
+          className="focus-ring inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline"
         >
           ← Voltar ao início
         </Link>
-        <h1 className="mt-8 font-serif text-4xl font-medium text-foreground">
+        <h1 className="mt-8 font-sans text-3xl font-bold text-foreground sm:text-4xl">
           Política de privacidade
         </h1>
         <p className="mt-4 text-sm text-muted">
           Última atualização: {new Date().toLocaleDateString("pt-BR")}
         </p>
-        <div className="mt-10 space-y-6 text-base leading-relaxed text-muted">
+        <div className="mt-10 space-y-6 text-base leading-relaxed text-muted sm:text-left">
           <p>
             Esta página descreve como o site institucional de{" "}
             <strong className="text-foreground">{site.name}</strong> trata dados
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
             13.709/2018 — LGPD).
           </p>
           <section aria-labelledby="p1">
-            <h2 id="p1" className="font-serif text-xl text-foreground">
+            <h2 id="p1" className="font-sans text-xl font-semibold text-foreground">
               1. Quem é o responsável
             </h2>
             <p className="mt-3">
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
             </p>
           </section>
           <section aria-labelledby="p2">
-            <h2 id="p2" className="font-serif text-xl text-foreground">
+            <h2 id="p2" className="font-sans text-xl font-semibold text-foreground">
               2. Quais dados podemos tratar
             </h2>
             <p className="mt-3">
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             </p>
           </section>
           <section aria-labelledby="p3">
-            <h2 id="p3" className="font-serif text-xl text-foreground">
+            <h2 id="p3" className="font-sans text-xl font-semibold text-foreground">
               3. Finalidades e bases legais
             </h2>
             <p className="mt-3">
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
             </p>
           </section>
           <section aria-labelledby="p4">
-            <h2 id="p4" className="font-serif text-xl text-foreground">
+            <h2 id="p4" className="font-sans text-xl font-semibold text-foreground">
               4. Compartilhamento e cookies
             </h2>
             <p className="mt-3">
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
             </p>
           </section>
           <section aria-labelledby="p5">
-            <h2 id="p5" className="font-serif text-xl text-foreground">
+            <h2 id="p5" className="font-sans text-xl font-semibold text-foreground">
               5. Seus direitos
             </h2>
             <p className="mt-3">
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
             </p>
           </section>
           <section aria-labelledby="p6">
-            <h2 id="p6" className="font-serif text-xl text-foreground">
+            <h2 id="p6" className="font-sans text-xl font-semibold text-foreground">
               6. Conteúdo informativo
             </h2>
             <p className="mt-3">

@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import { BackToTop } from "@/components/BackToTop";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { JsonLd } from "@/components/JsonLd";
+import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -9,13 +11,7 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin", "latin-ext"],
   display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -70,12 +66,16 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${dmSans.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      className={`${dmSans.variable} h-full scroll-smooth antialiased`}
     >
       <body className="font-sans min-h-full overflow-x-clip bg-background text-foreground">
         <JsonLd />
-        {children}
+        <SiteHeader />
+        <div className="pt-[calc(4rem+env(safe-area-inset-top,0px))] sm:pt-[calc(4.25rem+env(safe-area-inset-top,0px))]">
+          {children}
+        </div>
         <FloatingWhatsApp />
+        <BackToTop />
       </body>
     </html>
   );
