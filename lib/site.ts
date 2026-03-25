@@ -25,10 +25,10 @@ export const site = {
   crm: process.env.NEXT_PUBLIC_CRM ?? "CRM-UF a confirmar",
   mapsEmbedUrl: process.env.NEXT_PUBLIC_MAPS_EMBED_URL ?? "",
   mapsDirectionsUrl: process.env.NEXT_PUBLIC_MAPS_DIRECTIONS_URL ?? "",
-  /** Padrão: recorte com transparência / fade no hero. Sobrescreva com NEXT_PUBLIC_HERO_IMAGE. */
+  /** Padrão: hero em /public. Sobrescreva com NEXT_PUBLIC_HERO_IMAGE. */
   heroImageSrc:
     process.env.NEXT_PUBLIC_HERO_IMAGE?.trim() ||
-    "/dra-juliana-druzian-reumatologista-compressed.jpeg",
+    "/dra-juliana-druzian-reumatologista-compreed.webp",
   aboutImageSrc: process.env.NEXT_PUBLIC_ABOUT_IMAGE?.trim() || "",
   jsonLdIncludeAddress:
     process.env.NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS === "true",

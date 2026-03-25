@@ -10,14 +10,23 @@ type Props = {
 export function DoctorVisual({ src, alt, priority, variant }: Props) {
   if (variant === "hero") {
     return (
-      <div className="relative w-full overflow-visible bg-transparent">
-        <div className="relative mx-auto w-full min-h-[min(52vh,520px)] max-h-[min(72vh,680px)] sm:min-h-[min(48vh,480px)] lg:mx-0 lg:ml-auto lg:max-h-[min(78vh,720px)] lg:max-w-[min(100%,36rem)] xl:max-w-[min(100%,42rem)]">
+      <div className="relative w-full max-w-full bg-transparent">
+        {/* Mobile: largura do container, altura limitada para caber no viewport */}
+        {/* Desktop (lg+): 100% da coluna, área alta para a imagem em escala máxima */}
+        <div
+          className={
+            "relative w-full max-w-full " +
+            "min-h-[min(42vh,360px)] max-h-[min(64vh,520px)] " +
+            "sm:min-h-[min(46vh,400px)] sm:max-h-[min(68vh,580px)] " +
+            "lg:mx-0 lg:min-h-[min(88vh,920px)] lg:max-h-[min(96vh,1000px)] lg:w-full lg:max-w-none"
+          }
+        >
           <Image
             src={src}
             alt={alt}
             fill
             priority={priority}
-            sizes="(max-width: 1024px) 100vw, min(42rem, 45vw)"
+            sizes="(max-width: 1023px) 100vw, 50vw"
             className="object-contain object-bottom"
           />
         </div>
