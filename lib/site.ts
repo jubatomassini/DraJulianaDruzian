@@ -28,7 +28,7 @@ export const site = {
   /** Padrão: hero em /public. Sobrescreva com NEXT_PUBLIC_HERO_IMAGE. */
   heroImageSrc:
     process.env.NEXT_PUBLIC_HERO_IMAGE?.trim() ||
-    "/dra-juliana-druzian-reumatologista-essa.webp",
+    "/dra-juliana-druzian-reumatologista-nova.webp",
   aboutImageSrc: process.env.NEXT_PUBLIC_ABOUT_IMAGE?.trim() || "",
   jsonLdIncludeAddress:
     process.env.NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS === "true",
