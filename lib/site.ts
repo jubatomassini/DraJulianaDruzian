@@ -25,7 +25,10 @@ export const site = {
   crm: process.env.NEXT_PUBLIC_CRM ?? "CRM-UF a confirmar",
   mapsEmbedUrl: process.env.NEXT_PUBLIC_MAPS_EMBED_URL ?? "",
   mapsDirectionsUrl: process.env.NEXT_PUBLIC_MAPS_DIRECTIONS_URL ?? "",
-  heroImageSrc: process.env.NEXT_PUBLIC_HERO_IMAGE?.trim() || "",
+  /** Padrão: recorte com transparência / fade no hero. Sobrescreva com NEXT_PUBLIC_HERO_IMAGE. */
+  heroImageSrc:
+    process.env.NEXT_PUBLIC_HERO_IMAGE?.trim() ||
+    "/dra-juliana-druzian-reumatologista-compressed.jpeg",
   aboutImageSrc: process.env.NEXT_PUBLIC_ABOUT_IMAGE?.trim() || "",
   jsonLdIncludeAddress:
     process.env.NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS === "true",

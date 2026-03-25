@@ -8,19 +8,27 @@ type Props = {
 };
 
 export function DoctorVisual({ src, alt, priority, variant }: Props) {
-  const sizes =
-    variant === "hero"
-      ? "(max-width: 1024px) 100vw, 36vw"
-      : "(max-width: 1024px) 100vw, 40vw";
+  if (variant === "hero") {
+    return (
+      <div className="relative w-full overflow-visible bg-transparent">
+        <div className="relative mx-auto w-full min-h-[min(52vh,520px)] max-h-[min(72vh,680px)] sm:min-h-[min(48vh,480px)] lg:mx-0 lg:ml-auto lg:max-h-[min(78vh,720px)] lg:max-w-[min(100%,36rem)] xl:max-w-[min(100%,42rem)]">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            priority={priority}
+            sizes="(max-width: 1024px) 100vw, min(42rem, 45vw)"
+            className="object-contain object-bottom"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  const sizes = "(max-width: 1024px) 100vw, 40vw";
 
   return (
-    <div
-      className={
-        variant === "hero"
-          ? "relative aspect-[4/5] w-full overflow-hidden rounded-[1.35rem] bg-gradient-to-br from-rose-soft/40 via-beige-warm to-sage/25 shadow-lg shadow-brown-soft/10 ring-1 ring-brown-soft/10 sm:rounded-3xl"
-          : "relative aspect-[4/5] w-full overflow-hidden rounded-[1.35rem] bg-gradient-to-tr from-beige-warm via-white to-rose-soft/30 shadow-md ring-1 ring-brown-soft/10 sm:rounded-3xl"
-      }
-    >
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.35rem] bg-gradient-to-tr from-beige-warm via-white to-rose-soft/30 shadow-md ring-1 ring-brown-soft/10 sm:rounded-3xl">
       <Image
         src={src}
         alt={alt}

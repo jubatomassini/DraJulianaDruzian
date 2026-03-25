@@ -17,7 +17,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-rose-soft/30 to-transparent blur-2xl sm:h-72"
         aria-hidden
       />
-      <Container className="relative grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:gap-14">
+      <Container className="relative grid min-w-0 grid-cols-1 items-end gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-10 xl:gap-14">
         <div className="animate-fade-up order-1 min-w-0 max-w-xl text-center sm:text-left lg:max-w-none">
           <p className="mb-3 text-xs font-light uppercase leading-relaxed tracking-[0.14em] text-sage sm:text-sm sm:tracking-[0.18em]">
             Reumatologia · {site.cityUf}
@@ -66,7 +66,7 @@ export function HeroSection() {
           </p>
         </div>
         <div className="animate-fade-up order-2 flex w-full min-w-0 justify-center lg:justify-end">
-          <div className="w-full max-w-[min(100%,18rem)] sm:max-w-xs lg:max-w-none">
+          <div className="w-full max-w-lg sm:max-w-xl lg:max-w-none lg:w-full">
             {heroSrc ? (
               <DoctorVisual
                 variant="hero"
