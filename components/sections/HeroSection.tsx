@@ -10,7 +10,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative overflow-x-clip overflow-y-visible bg-gradient-to-b from-beige-warm/90 via-white to-white pb-12 pt-8 sm:pb-16 sm:pt-12 lg:pb-24 lg:pt-16"
+      className="relative overflow-x-hidden overflow-y-visible bg-gradient-to-b from-beige-warm/90 via-white to-white pb-12 pt-8 sm:pb-16 sm:pt-12 lg:pb-24 lg:pt-16"
       aria-labelledby="hero-heading"
     >
       <div
@@ -66,7 +66,8 @@ export function HeroSection() {
           </p>
         </div>
         <div className="animate-fade-up order-2 flex w-full min-w-0 justify-center lg:min-h-0 lg:w-full lg:items-end lg:self-stretch">
-          <div className="w-full max-w-[min(100%,22rem)] sm:max-w-md md:max-w-lg lg:max-w-none lg:flex lg:h-full lg:min-h-0 lg:w-full lg:max-w-full lg:flex-col lg:justify-end">
+          {/* Mobile: largura total da viewport; desktop: 100% da coluna da grelha */}
+          <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 lg:static lg:left-auto lg:flex lg:h-full lg:min-h-0 lg:w-full lg:max-w-none lg:translate-x-0 lg:flex-col lg:justify-end">
             {heroSrc ? (
               <DoctorVisual
                 variant="hero"

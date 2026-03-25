@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+/** Dimensões do ficheiro hero por defeito em /public (ajuste se trocar o asset). */
+const HERO_INTRINSIC = { width: 1016, height: 1052 } as const;
+
 type Props = {
   src: string;
   alt: string;
@@ -11,25 +14,16 @@ export function DoctorVisual({ src, alt, priority, variant }: Props) {
   if (variant === "hero") {
     return (
       <div className="relative w-full max-w-full bg-transparent">
-        {/* Mobile: largura do container, altura limitada para caber no viewport */}
-        {/* Desktop (lg+): 100% da coluna, área alta para a imagem em escala máxima */}
-        <div
-          className={
-            "relative w-full max-w-full " +
-            "min-h-[min(42vh,360px)] max-h-[min(64vh,520px)] " +
-            "sm:min-h-[min(46vh,400px)] sm:max-h-[min(68vh,580px)] " +
-            "lg:mx-0 lg:min-h-[min(88vh,920px)] lg:max-h-[min(96vh,1000px)] lg:w-full lg:max-w-none"
-          }
-        >
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            priority={priority}
-            sizes="(max-width: 1023px) 100vw, 50vw"
-            className="object-contain object-bottom"
-          />
-        </div>
+        <Image
+          src={src}
+          alt={alt}
+          width={HERO_INTRINSIC.width}
+          height={HERO_INTRINSIC.height}
+          priority={priority}
+          quality={100}
+          sizes="(max-width: 1023px) 100vw, 50vw"
+          className="h-auto w-full max-w-none object-contain object-bottom"
+        />
       </div>
     );
   }
