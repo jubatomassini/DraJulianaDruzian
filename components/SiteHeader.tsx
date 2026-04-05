@@ -89,8 +89,8 @@ function BrandMark({
 }) {
   if (logoBroken) {
     return (
-      <div className="flex min-w-0 flex-col leading-tight">
-        <span className="truncate font-sans text-sm font-light text-foreground sm:text-base">
+      <div className="flex min-w-0 max-w-[min(18rem,85vw)] flex-col items-center leading-tight md:items-start">
+        <span className="truncate text-center font-sans text-sm font-light text-foreground sm:text-base md:text-left">
           Dra. Juliana Druzian
         </span>
         <span className="text-xs font-light text-sage">{site.specialty}</span>
@@ -99,13 +99,13 @@ function BrandMark({
   }
 
   return (
-    <div className="relative h-9 w-auto max-w-[min(16rem,62vw)] shrink-0 sm:h-10 sm:max-w-[18rem]">
+    <div className="relative h-12 w-auto max-w-[min(26rem,calc(100vw-5.5rem))] shrink-0 sm:h-14 md:h-14 lg:h-16 md:max-w-[28rem] lg:max-w-[32rem]">
       <Image
         src="/logo-dra-juliana.png"
         alt=""
         width={1164}
         height={194}
-        className="h-full w-auto object-contain object-left"
+        className="h-full w-auto object-contain object-center md:object-left"
         priority
         onError={() => setLogoBroken(true)}
       />
@@ -139,14 +139,14 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-brown-soft/10 bg-white/92 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
       <div
-        className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:h-[4.25rem] sm:px-6 lg:px-8"
+        className="relative mx-auto flex h-16 max-w-6xl items-center justify-end gap-3 px-4 sm:h-[4.25rem] sm:px-6 lg:px-8 md:justify-between"
         style={{
           paddingTop: "max(0px, env(safe-area-inset-top, 0px))",
         }}
       >
         <Link
           href="/"
-          className="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg py-1"
+          className="focus-ring absolute left-1/2 top-1/2 z-10 flex min-w-0 max-w-[calc(100%-5.5rem)] -translate-x-1/2 -translate-y-1/2 justify-center rounded-lg py-1 md:static md:left-auto md:top-auto md:z-auto md:max-w-none md:translate-x-0 md:translate-y-0 md:justify-start"
           aria-label={`Início — ${site.name}`}
           onClick={close}
         >
@@ -154,7 +154,7 @@ export function SiteHeader() {
         </Link>
 
         <nav
-          className="hidden items-center gap-1 md:flex"
+          className="relative z-20 hidden items-center gap-1 md:flex"
           aria-label="Navegação principal"
         >
           <Link
@@ -177,7 +177,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="focus-ring flex h-11 w-11 items-center justify-center rounded-full text-foreground md:hidden"
+          className="focus-ring relative z-20 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-foreground md:hidden"
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
