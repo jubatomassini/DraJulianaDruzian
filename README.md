@@ -36,7 +36,7 @@ npm start
 
 ## Logo e menu
 
-- Coloque o arquivo **`public/logo.svg`** (vector da marca). Enquanto o SVG não carregar, o cabeçalho mostra o nome **Dra. Juliana Druzian** em texto.
+- O cabeçalho usa **`public/logo-dra-juliana.png`**. Se a imagem falhar ao carregar, o nome **Dra. Juliana Druzian** aparece em texto.
 - O menu fixo inclui âncoras (Início, Especialidades, Sobre, Localização) e ícones para **Facebook**, **Instagram** e **Currículo Lattes** quando as URLs abaixo estiverem definidas.
 
 ## Checklist rápido na Vercel

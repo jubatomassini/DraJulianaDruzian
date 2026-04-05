@@ -42,6 +42,18 @@ export function SiteFooter() {
         <p className="text-center text-xs text-muted sm:text-left">
           © {new Date().getFullYear()} {site.name}. Conteúdo informativo.
         </p>
+        <p className="mt-3 text-center text-xs text-muted sm:text-left">
+          Desenvolvido por{" "}
+          <a
+            href="https://apolloonze.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring text-muted underline-offset-4 hover:text-foreground hover:underline"
+          >
+            Apollo Onze - Marketing e Comunicação
+          </a>
+          .
+        </p>
       </Container>
     </footer>
   );

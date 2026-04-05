@@ -99,15 +99,15 @@ function BrandMark({
   }
 
   return (
-    <div className="relative h-10 w-10 shrink-0 sm:h-11 sm:w-11">
+    <div className="relative h-9 w-auto max-w-[min(16rem,62vw)] shrink-0 sm:h-10 sm:max-w-[18rem]">
       <Image
-        src="/logo.svg"
+        src="/logo-dra-juliana.png"
         alt=""
-        width={44}
-        height={44}
-        className="object-contain"
+        width={1164}
+        height={194}
+        className="h-full w-auto object-contain object-left"
+        priority
         onError={() => setLogoBroken(true)}
-        unoptimized
       />
     </div>
   );
@@ -151,24 +151,6 @@ export function SiteHeader() {
           onClick={close}
         >
           <BrandMark logoBroken={logoBroken} setLogoBroken={setLogoBroken} />
-          {!logoBroken ? (
-            <div className="flex min-w-0 flex-col leading-tight sm:hidden">
-              <span className="truncate font-sans text-sm font-light text-foreground">
-                Dra. Juliana Druzian
-              </span>
-              <span className="text-[11px] font-light text-sage">
-                {site.specialty}
-              </span>
-            </div>
-          ) : null}
-          {!logoBroken ? (
-            <div className="hidden min-w-0 flex-col leading-tight sm:flex">
-              <span className="truncate font-sans text-sm font-light text-foreground">
-                Dra. Juliana Druzian
-              </span>
-              <span className="text-xs font-light text-sage">{site.specialty}</span>
-            </div>
-          ) : null}
         </Link>
 
         <nav
