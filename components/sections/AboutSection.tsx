@@ -27,18 +27,27 @@ export function AboutSection() {
                 <strong className="font-medium text-foreground">
                   {site.name}
                 </strong>{" "}
-                acredita que a reumatologia vai muito além do diagnóstico. Seu
-                compromisso está em compreender cada paciente de forma única,
-                respeitando sua história, suas dores e seus desafios.
+                é médica especialista em Reumatologia (RQE 9656), dedicada ao
+                cuidado de pacientes com doenças articulares, autoimunes e
+                inflamatórias.
               </p>
               <p>
-                Com uma abordagem humanizada e baseada em evidências
-                científicas, busca não apenas controlar doenças, mas devolver
-                qualidade de vida, autonomia e bem-estar.
+                Formada pela Unicesumar, construiu uma trajetória sólida com
+                residência em Clínica Médica pela Santa Casa de Maringá e
+                especialização em Reumatologia pelo HUMAP/UFMS, adquirindo ampla
+                experiência tanto em atendimentos ambulatoriais quanto
+                hospitalares, inclusive em casos de maior complexidade.
               </p>
               <p>
-                Seu cuidado é guiado pela escuta atenta, precisão clínica e pelo
-                compromisso genuíno com cada pessoa que atende.
+                Seu atendimento é pautado na medicina baseada em evidências,
+                aliado a um olhar atento e individualizado. Com escuta
+                qualificada, empatia e clareza, busca oferecer segurança ao
+                paciente em todas as etapas do diagnóstico e tratamento.
+              </p>
+              <p>
+                Seu compromisso é proporcionar um cuidado de excelência,
+                promovendo controle da doença, bem-estar e mais qualidade de
+                vida.
               </p>
             </div>
           </div>

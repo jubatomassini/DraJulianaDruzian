@@ -55,7 +55,7 @@ export function LocationSection() {
             {hasEmbed ? (
               <LazyMapEmbed
                 embedUrl={site.mapsEmbedUrl}
-                title="Mapa do consultório da Dra. Juliana Druzian"
+                title="Mapa — Clínica Cimed Sinop (Dra. Juliana Druzian)"
               />
             ) : (
               <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-brown-soft/25 bg-white/60 p-6 text-center text-sm text-muted">
