@@ -89,8 +89,8 @@ function BrandMark({
 }) {
   if (logoBroken) {
     return (
-      <div className="flex min-w-0 max-w-[min(18rem,85vw)] flex-col items-center leading-tight md:items-start">
-        <span className="truncate text-center font-sans text-sm font-light text-foreground sm:text-base md:text-left">
+      <div className="flex min-w-0 max-w-[min(18rem,calc(100vw-5.5rem))] flex-col items-start leading-tight">
+        <span className="truncate font-sans text-sm font-light text-foreground sm:text-base">
           Dra. Juliana Druzian
         </span>
         <span className="text-xs font-light text-sage">{site.specialty}</span>
@@ -105,7 +105,7 @@ function BrandMark({
         alt=""
         width={1164}
         height={194}
-        className="h-full w-auto object-contain object-center md:object-left"
+        className="h-full w-auto object-contain object-left"
         priority
         onError={() => setLogoBroken(true)}
       />
@@ -139,14 +139,14 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-brown-soft/10 bg-white/92 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
       <div
-        className="relative mx-auto flex h-16 max-w-6xl items-center justify-end gap-3 px-4 sm:h-[4.25rem] sm:px-6 lg:px-8 md:justify-between"
+        className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:h-[4.25rem] sm:px-6 lg:px-8"
         style={{
           paddingTop: "max(0px, env(safe-area-inset-top, 0px))",
         }}
       >
         <Link
           href="/"
-          className="focus-ring absolute left-1/2 top-1/2 z-10 flex min-w-0 max-w-[calc(100%-5.5rem)] -translate-x-1/2 -translate-y-1/2 justify-center rounded-lg py-1 md:static md:left-auto md:top-auto md:z-auto md:max-w-none md:translate-x-0 md:translate-y-0 md:justify-start"
+          className="focus-ring flex min-w-0 flex-1 items-center justify-start rounded-lg py-1 pr-2 md:flex-initial md:pr-0"
           aria-label={`Início — ${site.name}`}
           onClick={close}
         >
@@ -154,7 +154,7 @@ export function SiteHeader() {
         </Link>
 
         <nav
-          className="relative z-20 hidden items-center gap-1 md:flex"
+          className="hidden items-center gap-1 md:flex"
           aria-label="Navegação principal"
         >
           <Link
@@ -177,7 +177,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="focus-ring relative z-20 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-foreground md:hidden"
+          className="focus-ring flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-foreground md:hidden"
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
