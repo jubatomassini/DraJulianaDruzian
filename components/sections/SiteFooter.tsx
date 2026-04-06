@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialIconLinks } from "@/components/SocialIconLinks";
 import { Container } from "@/components/ui/Container";
 import { getWhatsAppHref, site } from "@/lib/site";
 
@@ -30,6 +31,7 @@ export function SiteFooter() {
           ) : (
             <span className="text-muted">WhatsApp (configure o ambiente)</span>
           )}
+          <SocialIconLinks compact className="pt-1" />
           <Link
             href="/privacidade"
             className="focus-ring text-muted underline-offset-4 hover:text-foreground hover:underline"

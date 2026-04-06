@@ -38,8 +38,12 @@ export const site = {
   /** Inclui endereço no JSON-LD; desative com NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS=false */
   jsonLdIncludeAddress:
     process.env.NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS !== "false",
-  facebookUrl: envUrl("NEXT_PUBLIC_FACEBOOK_URL"),
-  instagramUrl: envUrl("NEXT_PUBLIC_INSTAGRAM_URL"),
+  facebookUrl:
+    envUrl("NEXT_PUBLIC_FACEBOOK_URL") ||
+    "https://www.facebook.com/julianadruzian.reumato",
+  instagramUrl:
+    envUrl("NEXT_PUBLIC_INSTAGRAM_URL") ||
+    "https://www.instagram.com/julianadruzian.reumato/",
   lattesUrl: envUrl("NEXT_PUBLIC_LATTES_URL"),
 } as const;
 
