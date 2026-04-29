@@ -13,7 +13,7 @@ Repositório: [github.com/jubatomassini/DraJulianaDruzian](https://github.com/ju
 
 1. **Subir o código** para o GitHub (commit + push neste repositório).
 2. Na **Vercel**: importar o projeto, framework Next.js detectado automaticamente; o primeiro deploy já funciona com valores padrão de `lib/site.ts` / fallbacks de UI.
-3. **Depois do deploy:** no painel da Vercel → *Settings → Environment Variables*, cadastre as variáveis (veja `.env.example`). Principal: `NEXT_PUBLIC_SITE_URL` com a URL real do site (ex.: `https://drajulianadruzian.vercel.app` ou domínio próprio) e `NEXT_PUBLIC_WHATSAPP_E164` para ativar os botões de WhatsApp.
+3. **Depois do deploy:** no painel da Vercel → *Settings → Environment Variables*, cadastre as variáveis (veja `.env.example`). Principal: `NEXT_PUBLIC_SITE_URL` com a URL real do site (ex.: `https://drajulianadruzian.vercel.app` ou domínio próprio) e `NEXT_PUBLIC_WHATSAPP_E164` (ex.: `5566992294459` para +55 66 99229-4459) para os botões de WhatsApp.
 4. **Opcional (novo commit):** fotos em `public/images/`, variáveis `NEXT_PUBLIC_HERO_IMAGE` / `NEXT_PUBLIC_ABOUT_IMAGE`, URLs do Google Maps — ajuste no painel da Vercel e faça *Redeploy* se necessário.
 
 Variáveis locais para desenvolvimento: copie `.env.example` para `.env.local` quando for rodar `npm run dev` com dados reais.

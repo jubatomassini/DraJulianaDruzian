@@ -18,7 +18,7 @@ export const site = {
     "Reumatologista (RQE 9656) em Sinop–MT, na Clínica Cimed. Atendimento humanizado " +
     "e baseado em evidências: doenças articulares, autoimunes e inflamatórias.",
   url: trimSlash(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  whatsappE164: process.env.NEXT_PUBLIC_WHATSAPP_E164 ?? "556635310333",
+  whatsappE164: process.env.NEXT_PUBLIC_WHATSAPP_E164 ?? "5566992294459",
   addressLine:
     process.env.NEXT_PUBLIC_ADDRESS ??
     "Clínica Cimed Sinop — Av. das Embaúbas, 1900 — CEP 78550-084",
