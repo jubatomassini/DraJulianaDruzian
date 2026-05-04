@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import { BackToTop } from "@/components/BackToTop";
+import {
+  GoogleTagManagerNoScript,
+  GoogleTagManagerScript,
+} from "@/components/GoogleTagManager";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -68,7 +72,11 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${montserrat.variable} h-full scroll-smooth antialiased`}
     >
+      <head>
+        <GoogleTagManagerScript />
+      </head>
       <body className="font-sans font-extralight min-h-full overflow-x-clip bg-background text-foreground">
+        <GoogleTagManagerNoScript />
         <JsonLd />
         <SiteHeader />
         <div className="pt-[calc(4rem+env(safe-area-inset-top,0px))] sm:pt-[calc(4.25rem+env(safe-area-inset-top,0px))]">

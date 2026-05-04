@@ -5,6 +5,13 @@ function envUrl(key: string): string {
   return v && v.length > 0 ? v : "";
 }
 
+function envGtmId(): string {
+  const raw = process.env.NEXT_PUBLIC_GTM_ID;
+  if (raw === "") return "";
+  const t = raw?.trim();
+  return t && t.length > 0 ? t : "GTM-KF9SFL82";
+}
+
 export const site = {
   name: "Dra. Juliana Druzian",
   specialty: "Reumatologia",
@@ -45,6 +52,8 @@ export const site = {
     envUrl("NEXT_PUBLIC_INSTAGRAM_URL") ||
     "https://www.instagram.com/julianadruzian.reumato/",
   lattesUrl: envUrl("NEXT_PUBLIC_LATTES_URL"),
+  /** Google Tag Manager. `NEXT_PUBLIC_GTM_ID=` (vazio) desativa; omitir env usa GTM-KF9SFL82. */
+  gtmId: envGtmId(),
 } as const;
 
 export const whatsAppPrefill =
