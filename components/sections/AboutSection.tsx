@@ -27,7 +27,7 @@ export function AboutSection() {
                 <strong className="font-medium text-foreground">
                   {site.name}
                 </strong>{" "}
-                é médica especialista em Reumatologia (RQE 9656), dedicada ao
+                é médica especialista em Reumatologia ({site.rqe}), dedicada ao
                 cuidado de pacientes com doenças articulares, autoimunes e
                 inflamatórias.
               </p>

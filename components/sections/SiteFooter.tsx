@@ -15,6 +15,7 @@ export function SiteFooter() {
           </p>
           <p className="mt-1 text-sm text-muted">{site.specialty}</p>
           <p className="mt-2 text-sm text-muted">{site.crm}</p>
+          <p className="mt-1 text-sm text-muted">{site.rqe}</p>
           <p className="mt-1 text-sm text-muted">{site.cityUf}</p>
         </div>
         <div className="flex flex-col items-center gap-3 text-sm sm:items-start">

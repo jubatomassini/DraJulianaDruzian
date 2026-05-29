@@ -45,7 +45,7 @@ npm start
 |----------|--------|
 | `NEXT_PUBLIC_SITE_URL` | Sempre em produção (canônica + sitemap + OG) |
 | `NEXT_PUBLIC_WHATSAPP_E164` | Para CTAs e botão flutuante |
-| `NEXT_PUBLIC_CITY_UF`, `NEXT_PUBLIC_ADDRESS`, `NEXT_PUBLIC_CRM` | Conteúdo e SEO local |
+| `NEXT_PUBLIC_CITY_UF`, `NEXT_PUBLIC_ADDRESS`, `NEXT_PUBLIC_CRM`, `NEXT_PUBLIC_RQE` | Conteúdo e SEO local |
 | `NEXT_PUBLIC_MAPS_EMBED_URL` / `NEXT_PUBLIC_MAPS_DIRECTIONS_URL` | Seção do mapa |
 | `NEXT_PUBLIC_JSONLD_INCLUDE_ADDRESS` | `true` só com endereço real conferido |
 | `NEXT_PUBLIC_FACEBOOK_URL` | Link do Facebook (menu) |
