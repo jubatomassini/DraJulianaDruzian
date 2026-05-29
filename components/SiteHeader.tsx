@@ -35,8 +35,8 @@ function BrandMark({
       <Image
         src="/logo-dra-juliana.png"
         alt=""
-        width={1164}
-        height={194}
+        width={1366}
+        height={324}
         className="h-full w-auto object-contain object-left"
         priority
         onError={() => setLogoBroken(true)}

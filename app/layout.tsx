@@ -53,6 +53,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/fav-icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
