@@ -82,7 +82,7 @@ export default function RootLayout({
         <GoogleTagManagerNoScript />
         <JsonLd />
         <SiteHeader />
-        <div className="pt-[calc(4rem+env(safe-area-inset-top,0px))] sm:pt-[calc(4.25rem+env(safe-area-inset-top,0px))]">
+        <div className="pt-[calc(4.5rem+env(safe-area-inset-top,0px))] sm:pt-[calc(5rem+env(safe-area-inset-top,0px))] lg:pt-[calc(5.75rem+env(safe-area-inset-top,0px))]">
           {children}
         </div>
         <FloatingWhatsApp />

@@ -31,13 +31,13 @@ function BrandMark({
   }
 
   return (
-    <div className="relative h-12 w-auto max-w-[min(26rem,calc(100vw-5.5rem))] shrink-0 sm:h-14 md:h-14 lg:h-16 md:max-w-[28rem] lg:max-w-[32rem]">
+    <div className="relative w-[min(18rem,calc(100vw-5.5rem))] shrink-0 sm:w-[min(21rem,calc(100vw-5.5rem))] lg:w-[min(24rem,calc(100vw-5.5rem))]">
       <Image
         src="/logo-dra-juliana.png"
         alt=""
         width={1366}
         height={324}
-        className="h-full w-auto object-contain object-left"
+        className="h-auto w-full object-contain object-left"
         priority
         onError={() => setLogoBroken(true)}
       />
@@ -71,7 +71,7 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-brown-soft/10 bg-white/92 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
       <div
-        className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:h-[4.25rem] sm:px-6 lg:px-8"
+        className="mx-auto flex min-h-[4.5rem] max-w-6xl items-center justify-between gap-3 px-4 sm:min-h-20 sm:px-6 lg:min-h-[5.75rem] lg:px-8"
         style={{
           paddingTop: "max(0px, env(safe-area-inset-top, 0px))",
         }}
@@ -130,7 +130,7 @@ export function SiteHeader() {
       {open ? (
         <div
           id={panelId}
-          className="max-h-[min(70vh,calc(100dvh-4.25rem))] overflow-y-auto border-t border-brown-soft/10 bg-white px-4 py-4 shadow-lg md:hidden"
+          className="max-h-[min(70vh,calc(100dvh-4.5rem))] overflow-y-auto border-t border-brown-soft/10 bg-white px-4 py-4 shadow-lg sm:max-h-[min(70vh,calc(100dvh-5rem))] md:hidden"
           style={{
             paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))",
           }}
