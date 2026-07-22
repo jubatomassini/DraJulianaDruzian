@@ -26,22 +26,19 @@ export function HeroSection() {
             id="hero-heading"
             className="text-balance font-sans text-3xl font-light leading-[1.12] tracking-tight text-foreground sm:text-left sm:text-4xl sm:leading-[1.1] md:text-5xl lg:text-6xl"
           >
-            Cuidando da sua saúde com precisão, empatia e ciência.
+            Dor nas articulações, rigidez ou cansaço frequente?
           </h1>
-          <p className="mt-4 text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
-            Especialista em{" "}
-            <strong className="font-medium text-foreground">
-              doenças reumatológicas
-            </strong>{" "}
-            com foco em qualidade de vida.
-          </p>
+          <h2 className="mt-4 text-base font-normal leading-relaxed text-muted sm:mt-5 sm:text-lg">
+            Atendimento para artrite, lúpus, fibromialgia, osteoporose e outras
+            doenças reumatológicas.
+          </h2>
           <div className="mt-7 flex w-full min-w-0 flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start">
             <WhatsAppLink
               href={wa}
               tone="primary"
               className="w-full sm:w-auto"
             >
-              Agendar consulta
+              Consulte uma Reumatologista em Sinop-MT
             </WhatsAppLink>
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
               <Link
